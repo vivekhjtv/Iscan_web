@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/cropped-favicon-icon-32x32.png" type="image/png" sizes="16x16">
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> -->
+
+    <!-- for bx slider -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <!-- for bx slider operation start-->
+
+    <script>
+        $(document).ready(function () {
+            //   $('.slider').bxSlider();
+            $('.bxslider').bxSlider({
+                auto: 'true',
+                mode: 'fade',
+                speed: 1000,
+                pager: true,
+                captions: false,
+                controls: false,
+            });
+        });
+    </script>
+
+    <!-- for bx slider operation end-->
+
+
+    <!-- when scroll heater to be fixed  (start)-->
+
+
+    <script>
+        // window.onscroll = function() {myFunction()};
+
+        // var header = document.getElementById("myHeader");
+        // var sticky = header.offsetTop;
+
+        // function myFunction() {
+        // if (window.pageYOffset > sticky) {
+        //     header.classList.add("sticky");
+        // } else {
+        //     header.classList.remove("sticky");
+        // }
+        // }
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
+    </script>
+
+    <!-- when scroll heater to be fixed  (end)-->
+
+    <!-- when mobile navbar toggle  (start)-->
+
+
+    <script>
+        function mobilemenu() {
+            var element = document.getElementById("shortmenu");
+            element.classList.toggle("active-menu");
+        }
+    </script>
+
+
+    <!-- when mobile  navbar  toggle btn (end)-->
+
+    <!-- when mobile toggle btn (start)-->
+
+    <!-- <script>
+        function droptoggle() {
+        var element = document.getElementById("sub-menu-1");
+        if (element.style.display === "none") {
+            alert("hello if");
+            element.style.display = "block";
+        } else {
+            alert("hello else ");
+
+            element.style.display = "none";   
+        }
+        } 
+    </script> -->
+
+
+    <!-- when mobile  toggle btn  (end)-->
+
+
+    <title>I-scan</title>
+</head>
+
+<body>
+    <!-- start of header section -->
+
+
+    <section class="main-banner">
+        <header class="main-header" id="myHeader">
+            <div class="container">
+                <!-- <div class="inner-main-header"> -->
+                <div class="header-logo">
+                    <a href="" class="custom-logo"><img src="images/logo.png" alt="header-logo"></a>
+                    <a href="" class="sticky-logo"><img src="images/sticky-logo.png" alt="header-sticky-logo"></a>
+                </div>
+                <div class="navigation-bar">
+                    <nav>
+
+                        <button class="menu-toggle" onclick="mobilemenu()">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </button>
+
+                        <div id="shortmenu" class="">
+
+                            <span class="change" onclick="mobilemenu()">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </span>
+
+
+                            <ul class="navigation-ul mob-nav-ul">
+                                <li><a href="" class="nav-li-hover active">home</a></li>
+                                <li><a href="" class="nav-li-hover">about us</a></li>
+                                <li>
+                                    <label for="drop-1" id="dropdown-toggle">
+                                        <img src="images/a.png" alt="" class="icon">
+                                    </label>
+
+                                    <input type="checkbox" name="" id="drop-1">
+                                    <a href="" class="nav-li-hover dropdown">services+</a>
+
+
+                                    <div class="sub-menu-1 " id="sub-menu-1">
+                                        <ul class="dropdown-navbar  ">
+                                            <li id="" class=""><a href="">General ultrasound</a></li>
+                                            <li id="" class=""><a href="">Pregnancy ultrasound</a></li>
+                                            <li id="" class=""><a href="">Vascular ultrasound</a></li>
+                                            <li id="" class=""><a href="">Muskuloskeletal ultrasound</a></li>
+                                            <li id="" class=""><a href="">Paediatric ultrasound</a></li>
+                                            <li id="" class=""><a href="">Ultrasound guided injections</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="drop-2" id="dropdown-toggle">
+                                        <img src="images/a.png" alt="" class="icon">
+                                    </label>
+
+                                    <input type="checkbox" name="" id="drop-2">
+                                    <a href="" class="nav-li-hover dropdown">patients+</a>
+
+
+
+                                    <div class="sub-menu-1 " id="sub-menu-1">
+                                        <ul class="dropdown-navbar">
+                                            <li id="" class=""><a href="">General information</a></li>
+                                            <li id="" class=""><a href="">Billing policy</a></li>
+                                            <li id="" class=""><a href="">Patient preparation</a></li>
+                                            <li id="" class=""><a href="">Frequently asked question</a></li>
+                                            <li id="" class=""><a href="">Feedback</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="drop-3" id="dropdown-toggle">
+                                        <img src="images/a.png" alt="" class="icon">
+                                    </label>
+
+                                    <input type="checkbox" name="" id="drop-3">
+                                    <a href="" class="nav-li-hover dropdown">health professional+ </a>
+
+
+                                    <div class="sub-menu-1 " id="sub-menu-1">
+                                        <ul class="dropdown-navbar ">
+                                            <li id="" class=""><a href="">Image access</a></li>
+                                            <li id="" class=""><a href="">Print PDF referral</a></li>
+                                            <li id="" class=""><a href="">Referral pad order</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="" class="nav-li-hover">contact us</a></li>
+                                <li>
+                                    <a href="" class="appointment-btn">appointment
+                                        <img src="images/appointment-btn-arrow.png" alt="appointment-btn-arrow">
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+
+
+                    </nav>
+
+                </div>
+                <!-- </div> -->
+            </div>
+
+
+
+        </header>
+
+
+        <!-- <section class="bx"> -->
+        <ul class="bxslider">
+            <li>
+                <img src="images/banner1.jpg" />
+
+                <div class="banner-content">
+                    <div class="container">
+                        <h1>Welcome to <small>iScan <strong class="f-green"> Imaging </strong></small></h1>
+                        <p>Best Diagnostic imaging centre in Central Highlands</p>
+                        <div class="anchor">
+                            <a href="" class="banner-callnow">CALL NOW</a>
+                            <a href="" class="banner-covid19">COVID-19 INFORMATION FOR PATIENTS</a>
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <img src="images/banner2.jpg" />
+
+                <div class="banner-content">
+                    <div class="container">
+
+                        <h1>Making Advanced <small>Technology<strong class="f-green"> Affordable <span>&
+                                        Accessible</span></strong></small> </h1>
+                        <p>Our Aim is to keep you healthy</p>
+                        <div class="anchor">
+                            <a href="" class="banner-callnow">CALL NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <img src="images/banner3.jpg" />
+
+                <div class="banner-content">
+                    <div class="container">
+                        <h1>Best Outpatient <small>Diagnostic<strong class="f-green"> Imaging</strong></small> </h1>
+                        <p>World-Class Experience</p>
+                        <div class="anchor">
+                            <a href="" class="banner-callnow">CALL NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+        <!-- </section>  -->
+    </section>
+
+
+
+    <!-- end of header section -->
+
+
+    <!-- start of markew section -->
+
+    <section class="openinghours" id="openinghours">
+        <div class="container">
+            <marquee>
+                <ul>
+                    <li>
+                        <img src="images/clock-icon.png" alt="" title="">
+                        <h2>Opening hours</h2>
+                    </li>
+                    <li>
+                        <p><span>mon to fri</span> <strong>8:30</strong> am <strong>to 5:30</strong> pm</p>
+                    </li>
+                    <li>
+                        <p><span>sat</span> <strong>8:00</strong> am <strong>to 1:00</strong> pm</p>
+                    </li>
+                </ul>
+            </marquee>
+
+        </div>
+    </section>
+
+    <!-- end of markew section -->
+
+    <!-- start of 2nd section -->
+
+    <section class="section2back">
+
+        <div class="container" id="section-2">
+            <div class="section2">
+                <small>Our Services</small>
+                <h2>Quality Diagnostics</h2>
+                <p>iScan Imaging is a non corporate Radiology Imaging clinic. Our vision is to provide an expert and
+                    compassionate imaging services for our valued patients with highest standards of imaging safety.</p>
+                <ul class="section2imglist">
+                    <li class="img1general">
+                        <div class="service-list-content ">
+
+                            <div class="service-list-image">
+                                <img src="images/general-ultrasound.jpg" alt="general-ultrasound">
+                            </div>
+                            <div class="service-list-title-title">
+                                <img src="images/service-list-icon.png" alt="service-list-icon">
+                                <h3><strong>General</strong> ultrasound</h3>
+                            </div>
+                        </div>
+                        <div class="service-list-title-hover">
+                            <div class="service-list-hover-text">
+                                <h3><strong>General </strong> ultrasound</h3>
+                                <p>Abdomen, Renal, Thyroid, Breast, Scrotum</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-list-content">
+                            <div class="service-list-image">
+                                <img src="images/pregnancy-ultrasound.jpg" alt="pregnancy-ultrasound">
+                            </div>
+                            <div class="service-list-title-title">
+                                <img src="images/service-list-icon.png" alt="service-list-icon">
+                                <h3><strong>Pregnancy</strong> ultrasound</h3>
+                            </div>
+                        </div>
+                        <div class="service-list-title-hover">
+                            <div class="service-list-hover-text">
+                                <h3><strong>Pregnancy</strong> ultrasound</h3>
+                                <p>Dating Scan, Morphology Scan (18-22 weeks)</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-list-content">
+                            <div class="service-list-image">
+                                <img src="images/vascular-ultrasound.jpg" alt="vascular-ultrasound">
+                            </div>
+                            <div class="service-list-title-title">
+                                <img src="images/-list-icon.png" alt="service-list-icon">
+                                <h3><strong>Vascular</strong> ultrasound</h3>
+                            </div>
+                        </div>
+                        <div class="service-list-title-hover">
+                            <div class="service-list-hover-text">
+                                <h3><strong>Vascular</strong> ultrasound</h3>
+                                <p>DVT, Carotid Arteries, Lower Leg arteries, Renal arteries</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-list-content">
+                            <div class="service-list-image">
+                                <img src="images/muskuloskeletal-ultrasound.jpg" alt="muskuloskeletal-ultrasound">
+                            </div>
+                            <div class="service-list-title-title">
+                                <img src="images/service-list-icon.png" alt="service-list-icon">
+                                <h3><strong>Muskuloskeletal</strong> ultrasound</h3>
+                            </div>
+                        </div>
+                        <div class="service-list-title-hover">
+                            <div class="service-list-hover-text">
+                                <h3><strong>Muskuloskeletal</strong> ultrasound</h3>
+                                <p>Shoulder, Elbow, Wrist, Hand, Abdominal wall, Groin, Hip, Knee, Ankle, Foot, lumps &
+                                    bumps, Foreign body</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-list-content">
+                            <div class="service-list-image">
+                                <img src="images/paediatric-ultrasound.jpg" alt="paediatric-ultrasound">
+                            </div>
+                            <div class="service-list-title-title">
+                                <img src="images/service-list-icon.png" alt="service-list-icon">
+                                <h3><strong>Paediatric</strong> ultrasound</h3>
+                            </div>
+                        </div>
+                        <div class="service-list-title-hover">
+                            <div class="service-list-hover-text">
+                                <h3><strong>Paediatric</strong> ultrasound</h3>
+                                <p>Abdomen, Renal, Paediatric Hip</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-list-content">
+                            <div class="service-list-image">
+                                <img src="images/ultrasound-guided-injections.jpg" alt="ultrasound-guided-injections">
+                            </div>
+                            <div class="service-list-title-title">
+                                <img src="images/service-list-icon.png" alt="service-list-icon">
+                                <h3><strong>Ultrasound guided</strong> injections</h3>
+                            </div>
+                        </div>
+                        <div class="service-list-title-hover">
+                            <div class="service-list-hover-text">
+                                <h3><strong>Ultrasound guided</strong> injections</h3>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- end of 2nd section -->
+
+    <!-- start of 3rd section -->
+
+    <section class="sec3container">
+        <div class="container">
+            <div class="section-3" id="section-3">
+                <!-- <div class="sec3container"> -->
+                <div class="leftsec3">
+                    <small>state of the art</small>
+                    <h4>technology</h4>
+                    <ul class="leftsec3-ul">
+                        <li>
+                            <h5>Reliable and efficient patient centered services</h5>
+                        </li>
+                        <li>
+                            <h5>Highly experienced staff</h5>
+                        </li>
+                        <li>
+                            <h5>State of the Art Imaging Equipment</h5>
+                        </li>
+                        <li>
+                            <h5>Cutting edge Technology</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rightsec3">
+                    <img src="images/technology-right.jpg" alt="technology-right">
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- end of 3rd section -->
+
+    <!-- start of 4th section -->
+
+    <section class="booking">
+
+        <div class="container">
+            <div class="sec-booking">
+                <div class="inner-sec-booking">
+                    <img src="images/booking-icon.png" alt="" title="" class="booking-icon">
+                    <h6>Make A Booking</h6>
+                    <p>Same &amp; next day appointment <br>available. Make your Booking Today!</p>
+                    <a href="" class="b-online">Book online</a>
+                    <a href="" class="b-call-now">call now</a>
+                </div>
+            </div>
+
+            <div class="sec-question">
+                <div class="inner-sec-question">
+                    <img src="images/question-icon.png" alt="" title="" class="question-icon">
+                    <h6>Have A Question?</h6>
+                    <p>Let us answer your question <br>Get in touch Today!</p>
+                    <a href="" class="q-faqs">faqs</a>
+                    <a href="" class="q-call-now">call now</a>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- end of 4th section -->
+
+    <!-- start of footer -->
+    <footer>
+        <div class="footer-banner ">
+            <div class="container">
+                <div class="inner-footer-banner">
+                    <div class="f1">
+                        <img src="images/footer-logo.png" alt="footer-logo">
+                    </div>
+                    <!-- <div class ="formarkerlogo"> -->
+                    <div class="f2 ">
+                        <h4>QUICK LINKS</h4>
+
+                        <ul>
+                            <!-- style="margin-left: 20px; padding-left: 0;" -->
+
+                            <!-- <li class="no-marker" > -->
+                            <!-- <h4>QUICK LINKS</h4> -->
+                            <!-- </li> -->
+                            <li class="formarkerlogo af-hover">Home</li>
+                            <li class="formarkerlogo af-hover">About Us</li>
+                            <li class="formarkerlogo af-hover">For Paitents</li>
+                            <li class="formarkerlogo af-hover">For Health Professional</li>
+                            <li class="formarkerlogo af-hover">Contact Us</li>
+                        </ul>
+                    </div>
+                    <div class="f3 ">
+                        <h4>OUR SERVICES</h4>
+
+                        <ul>
+                            <!-- style="margin-left: 20px; padding-left: 0;" -->
+
+                            <!-- <li class="no-marker"> -->
+                            <!-- <h4>OUR SERVICES</h4> -->
+                            <!-- </li> -->
+                            <li class="formarkerlogo af-hover">General ultrasound</li>
+                            <li class="formarkerlogo af-hover">Pregnancy ultrasound</li>
+                            <li class="formarkerlogo af-hover">Vascular ultrasound</li>
+                            <li class="formarkerlogo af-hover">Muskuloskeletal ultrasound</li>
+                            <li class="formarkerlogo af-hover">Paediatric ultrasound</li>
+                            <li class="formarkerlogo af-hover">Ultrasound guided injections</li>
+                        </ul>
+                    </div>
+                    <!-- </div> -->
+
+                    <div class="f4">
+
+                        <h4>CONTACT US</h4>
+
+                        <ul>
+
+                            <li>46, Ruby Street,Emerald, 4720 Qld</li>
+
+                        </ul>
+
+                        <!-- <ul class="address" style=" padding-left: 0; padding-top: 20px;">
+                            <li>46, Ruby Street,</li>
+                            <li>Emerald, 4720</li>
+                            <li>Qld</li>
+                        </ul> -->
+
+
+                        <ul class="tele-address">
+                            <li style="padding-top: 20px;"><strong>T : <span class="af-hover"> 0749107805</span>
+                                </strong></li>
+                            <li><strong>E : <span class="af-hover">myScan@i-scan.com.au</span> </strong></li>
+                        </ul>
+
+                        <!-- for static img of folder without external css file-->
+
+                        <section id="social-media" class="social-media">
+                            <div class="social-media-div">
+                                <ul id="social-media-ul" class="social-media-ul"
+                                    style=" padding-left: 0; padding-top: 20px;">
+                                    <li id="menu-item-42" class="menu-item-42"><a target="_blank"
+                                            href="https://www.facebook.com/"><img src="images/facebook-icon.png"
+                                                alt="facebook"></a></li>
+                                    <li id="menu-item-44" class="menu-item-44"><a target="_blank"
+                                            href="https://www.instagram.com/accounts/login"><img
+                                                src="images/instagram-icon.png" alt="instagram"></a></li>
+                                    <li id="menu-item-45" class="menu-item-45"><a target="_blank"
+                                            href="https://www.linkedin.com/login"><img src="images/linkedin-icon.png"
+                                                alt="linkedin"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- for icon  with external css file-->
+
+                        <!-- <section id="social-media" class="social-media">
+                        <div class="social-media-div">
+                            <ul id="social-media-ul" class="social-media-ul">
+                                <li id="menu-item-42" class="menu-item-42"><a target="_blank" href="https://www.facebook.com/"><span><i class="fab fa-facebook"></i></span></a></li>
+                                <li id="menu-item-44" class="menu-item-44"><a target="_blank" href="https://www.instagram.com/accounts/login"><span><i class="fab fa-instagram"></i></span></a></li>
+                                <li id="menu-item-45" class="menu-item-45"><a target="_blank" href="https://www.linkedin.com/login"><span><i class="fab fa-linkedin"></i></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section> -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="copy-right">
+                <span>
+                    <p>
+                        © 2021<strong> iScan Imaging. </strong> All rights reserved.
+                    </p>
+                </span>
+
+                <div class="copy-right-list">
+                    <a href="" class="copy-contact">contact us</a>
+                    <a href="" class="copy-privacy">privacy policy</a>
+                    <a href=""><img src="images/stwi.png" alt="stwi"></a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+
+</body>
+
+</html>
